@@ -5,7 +5,7 @@ def load_email_spam_dataset():
     full_dataset = load_dataset("TrainingDataPro/email-spam-classification")
 
     # Split the dataset into train and validation sets
-    dataset = full_dataset['train'].train_test_split(test_size=0.2)
+    dataset = full_dataset['train'].train_test_split(test_size=0.2, seed=42)
 
     # Now, dataset is a dictionary with two keys: 'train' and 'test'
     # 'train' corresponds to the training set
